@@ -1,0 +1,25 @@
+import webpack from "webpack";
+import {BuildConfigOptions} from "./types/types";
+import {buildPlugins} from "./buildPlugins";
+import {buildLoaders} from "./buildLoaders";
+import {buildResolvers} from "./buildResolvers";
+
+export const buildWebpackConfig = (options: BuildConfigOptions): webpack.Configuration => {
+    const {mode, paths} = options;
+
+    return {
+        mode,
+        entry: paths.entry,
+        output: {
+            path: paths.build,
+            filename: '[name].[contenthash].js',
+            clean: true,
+        },
+        plugins: buildPlugins(options),
+        module: {
+            rules: buildLoaders(),
+        },
+        resolve: buildResolvers(),
+    };
+
+};
