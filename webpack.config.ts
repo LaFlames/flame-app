@@ -1,5 +1,5 @@
 import path from 'path';
-import {EnvVars, BuildPaths} from "./config/types/types";
+import {EnvVars, BuildPaths} from "./config/types";
 import {buildWebpackConfig} from "./config/buildWebpackConfig";
 
 
