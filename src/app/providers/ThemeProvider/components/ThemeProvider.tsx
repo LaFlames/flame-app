@@ -1,5 +1,6 @@
 import React from 'react';
-import {ThemeContext, ThemeEnum} from "./ThemeContext";
+import { ThemeEnum, ThemeContext } from '../context/ThemeContext';
+
 
 const defaultTheme = localStorage.getItem('theme') || 'light';
 

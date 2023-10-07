@@ -1,5 +1,5 @@
 import React from "react";
-import {ThemeContext, ThemeEnum} from "./ThemeContext";
+import {ThemeContext, ThemeEnum} from "../context/ThemeContext";
 
 interface UseThemeReturn {
     theme: ThemeEnum;
