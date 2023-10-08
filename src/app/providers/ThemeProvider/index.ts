@@ -1,2 +1,2 @@
 export { default as ThemeProvider } from './components/ThemeProvider'
-export { useTheme } from './hooks/useTheme'
+export { useTheme } from './lib/hooks/useTheme'
