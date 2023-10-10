@@ -2,7 +2,7 @@ import React from 'react';
 import "./styles/index.scss";
 import {classNames} from "shared/lib";
 import {useTheme} from "./providers";
-import {Navbar, ThemeSwitcher} from "widgets";
+import {Navbar, Sidebar} from "widgets";
 import {RouterProvider} from './providers/RouterProvider';
 
 
@@ -12,8 +12,11 @@ const App = () => {
     return (
         <div className={classNames('app', {}, [theme])}>
             <Navbar />
-            <ThemeSwitcher />
-            <RouterProvider />
+            <div className="pageWrapper">
+                <Sidebar />
+                <RouterProvider />
+            </div>
+
         </div>
     );
 };

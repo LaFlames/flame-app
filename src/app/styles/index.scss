@@ -10,3 +10,12 @@
 
   min-height: 100vh;
 }
+
+.pageWrapper {
+  display: flex;
+}
+
+.pageContent {
+  width: 100%;
+  padding: 20px;
+}
