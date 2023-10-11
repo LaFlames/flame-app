@@ -1,8 +1,8 @@
-import {Dispatch, SetStateAction, createContext} from "react";
+import { Dispatch, SetStateAction, createContext } from 'react';
 
 export enum ThemeEnum {
-    LIGHT = "light",
-    DARK = "dark",
+    LIGHT = 'light',
+    DARK = 'dark',
 }
 
 export interface IThemeContext {
@@ -10,4 +10,4 @@ export interface IThemeContext {
     setTheme?: Dispatch<SetStateAction<ThemeEnum>>;
 }
 
-export const ThemeContext = createContext<IThemeContext>({})
+export const ThemeContext = createContext<IThemeContext>({});

@@ -1,1 +1,1 @@
-export { default as MainPage } from './components/MainPageAsync'
+export { default as MainPage } from './components/MainPageAsync';

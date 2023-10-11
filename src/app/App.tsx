@@ -1,13 +1,12 @@
 import React from 'react';
-import "./styles/index.scss";
-import {classNames} from "shared/lib";
-import {useTheme} from "./providers";
-import {Navbar, Sidebar} from "widgets";
-import {RouterProvider} from './providers/RouterProvider';
+import './styles/index.scss';
+import { classNames } from 'shared/lib';
+import { Navbar, Sidebar } from 'widgets';
+import { useTheme } from './providers';
+import { RouterProvider } from './providers/RouterProvider';
 
-
-const App = () => {
-    const {theme} = useTheme();
+function App() {
+    const { theme } = useTheme();
 
     return (
         <div className={classNames('app', {}, [theme])}>
@@ -20,6 +19,6 @@ const App = () => {
             </React.Suspense>
         </div>
     );
-};
+}
 
 export default App;

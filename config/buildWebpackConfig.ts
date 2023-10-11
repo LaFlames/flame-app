@@ -1,12 +1,12 @@
-import webpack from "webpack";
-import {BuildConfigOptions} from "./types";
-import {buildPlugins} from "./buildPlugins";
-import {buildLoaders} from "./buildLoaders";
-import {buildResolvers} from "./buildResolvers";
-import {buildDevServer} from "./buildDevServer";
+import webpack from 'webpack';
+import { BuildConfigOptions } from './types';
+import { buildPlugins } from './buildPlugins';
+import { buildLoaders } from './buildLoaders';
+import { buildResolvers } from './buildResolvers';
+import { buildDevServer } from './buildDevServer';
 
 export const buildWebpackConfig = (options: BuildConfigOptions): webpack.Configuration => {
-    const {mode, paths, isDev} = options;
+    const { mode, paths, isDev } = options;
 
     return {
         mode,
@@ -24,5 +24,4 @@ export const buildWebpackConfig = (options: BuildConfigOptions): webpack.Configu
         resolve: buildResolvers(options),
         devServer: isDev ? buildDevServer(options) : undefined,
     };
-
 };

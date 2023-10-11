@@ -21,9 +21,10 @@
 
 .switchers {
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 12px;
+  flex-direction: column;
+  gap: 8px;
 }
