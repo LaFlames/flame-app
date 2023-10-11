@@ -1,21 +1,20 @@
-@import './variables/variables';
-@import './reset';
-@import './themes/dark';
-@import './themes/light';
+@import "./variables/variables";
+@import "./reset";
+@import "./themes/dark";
+@import "./themes/light";
 
 .app {
-  font: var(--font-l);
-  background: var(--bg-color);
-  color: var(--primary-color);
-
-  min-height: 100vh;
+    font: var(--font-l);
+    background: var(--bg-color);
+    color: var(--primary-color);
+    min-height: 100vh;
 }
 
 .pageWrapper {
-  display: flex;
+    display: flex;
 }
 
 .pageContent {
-  width: 100%;
-  padding: 20px;
+    width: 100%;
+    padding: 20px;
 }
