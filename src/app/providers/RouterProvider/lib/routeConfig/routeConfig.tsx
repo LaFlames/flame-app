@@ -11,4 +11,8 @@ export const routeConfig: Record<AppRouter, RouteProps> = {
         path: RoutePaths.about,
         element: <Pages.AboutPage />,
     },
+    [AppRouter.NOT_FOUND]: {
+        path: RoutePaths['not-found'],
+        element: <Pages.NotFoundPage />,
+    },
 };
