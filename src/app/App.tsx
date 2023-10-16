@@ -1,6 +1,6 @@
 import React from 'react';
 import './styles/index.scss';
-import { classNames } from 'shared/lib';
+import { classNames } from 'shared/lib/classNames';
 import { Navbar, Sidebar } from 'widgets';
 import { useTheme } from './providers';
 import { RouterProvider } from './providers/RouterProvider';

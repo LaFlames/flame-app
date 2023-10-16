@@ -1,4 +1,4 @@
-import { classNames } from 'shared/lib';
+import { classNames } from 'shared/lib/classNames';
 import { useTranslation } from 'react-i18next';
 import cls from './noteFoundPage.module.scss';
 
