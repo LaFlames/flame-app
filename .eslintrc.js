@@ -4,10 +4,7 @@ module.exports = {
         es2021: true,
         jest: true,
     },
-    extends: [
-        'plugin:react/recommended',
-        'airbnb',
-    ],
+    extends: ['plugin:react/recommended', 'airbnb', 'plugin:storybook/recommended'],
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaFeatures: {
@@ -35,7 +32,7 @@ module.exports = {
         'react/function-component-definition': 'off',
         'no-shadow': 'off',
         'jsx-a11y/control-has-associated-label': 'off',
-        'import/no-extraneous-dependencies': 'warn',
+        'import/no-extraneous-dependencies': 'off',
         'react/react-in-jsx-scope': 'off',
         'no-underscore-dangle': 'off',
         'react/jsx-closing-tag-location': 'off',
