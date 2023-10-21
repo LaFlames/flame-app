@@ -2,7 +2,7 @@ import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { ThemeDecorator } from 'shared/configs/storybook';
 import { ThemeEnum } from 'app/providers';
-import { Button, ThemeButton } from './Button';
+import { Button, ButtonTheme } from './Button';
 
 export default {
     title: 'shared/Button',
@@ -22,6 +22,6 @@ Primary.args = {
 export const SecondaryDark = Template.bind({});
 SecondaryDark.args = {
     children: 'Text',
-    theme: ThemeButton.CLEAR,
+    theme: ButtonTheme.CLEAR,
 };
 SecondaryDark.decorators = [ThemeDecorator(ThemeEnum.DARK)];

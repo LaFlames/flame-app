@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from 'shared/components';
+import { Button, ButtonSize, ButtonTheme } from 'shared/components';
 import { useTranslation } from 'react-i18next';
 
 interface LangSwitcherProps {
@@ -11,7 +11,7 @@ export const LangSwitcher = ({ className }: LangSwitcherProps) => {
     const changeLanguage = () => i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru');
 
     return (
-        <Button className={className} onClick={changeLanguage}>
+        <Button className={className} onClick={changeLanguage} theme={ButtonTheme.CLEAR} size={ButtonSize.L}>
             {t('lng')}
         </Button>
     );
