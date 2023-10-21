@@ -15,6 +15,9 @@
     "test:ui": "loki test",
     "test:ui:approve": "loki approve",
     "test:ui:ci": "loki --requireReference --reactUri file:./storybook-static",
+    "test:ui:report": "npm run test:ui:json && npm run test:ui:html",
+    "test:ui:json": "node scripts/generate-visual-json-report.js",
+    "test:ui:html": "reg-cli --from .loki/report.json --report .loki/report.html",
     "analyze:prod": "npm run build:prod --env analyze=true",
     "storybook": "start-storybook -p 6006 -c ./config/storybook",
     "storybook:build": "build-storybook -c ./config/storybook"
@@ -45,6 +48,7 @@
     "@typescript-eslint/parser": "^5.12.1",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.3",
+    "reg-cli": "^0.17.7",
     "css-loader": "^6.6.0",
     "eslint": "^8.10.0",
     "loki": "^0.31.0",
