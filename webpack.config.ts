@@ -3,7 +3,6 @@ import {buildWebpackConfig} from "./config/build/buildWebpackConfig";
 import {BuildEnv} from "./config/build/types";
 
 export default (env: BuildEnv) => {
-    console.log(env)
     const mode = env.mode || 'development';
     const PORT = env.port || 3000;
     const isDev = mode === 'development';
