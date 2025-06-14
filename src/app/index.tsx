@@ -1,8 +1,8 @@
 import {Link, Route, Routes} from "react-router-dom";
-import {AboutPage, MainPage} from "./pages";
+import {AboutPage, MainPage} from "pages";
 import {Suspense} from "react";
-import {useTheme} from "./theme/useTheme";
-import {classNames} from "./helpers/classNames";
+import {classNames} from "shared/lib";
+import {useTheme} from "./providers/ThemeProvider";
 
 const App = () => {
     const {theme, changeTheme} = useTheme();
