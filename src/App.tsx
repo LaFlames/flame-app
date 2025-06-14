@@ -2,12 +2,13 @@ import {Link, Route, Routes} from "react-router-dom";
 import {AboutPage, MainPage} from "./pages";
 import {Suspense} from "react";
 import {useTheme} from "./theme/useTheme";
+import {classNames} from "./helpers/classNames";
 
 const App = () => {
     const {theme, changeTheme} = useTheme();
 
     return (
-        <div className={`app ${theme}`}>
+        <div className={classNames("app", {}, [theme])}>
             <Suspense fallback='Loading...'>
                 <Link to='/'>Main</Link>
                 <Link to='/about'>About</Link>
