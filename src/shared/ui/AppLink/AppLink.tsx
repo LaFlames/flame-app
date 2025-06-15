@@ -3,8 +3,8 @@ import cls from './AppLink.module.scss';
 import {Link, LinkProps} from "react-router-dom";
 
 enum AppLinkTheme {
-    "PRIMARY" = "primary",
-    "SECONDARY" = "secondary",
+    PRIMARY = "primary",
+    SECONDARY = "secondary",
 }
 
 interface AppLinkProps extends LinkProps {
@@ -12,11 +12,12 @@ interface AppLinkProps extends LinkProps {
     theme?: AppLinkTheme;
 }
 
-const AppLink = ({className, theme = AppLinkTheme.PRIMARY, to, children}: AppLinkProps) => {
+const AppLink = ({className, theme = AppLinkTheme.PRIMARY, to, children, ...rest}: AppLinkProps) => {
      return (
         <Link
             to={to}
             className={classNames(cls.appLink, {}, [className, cls[theme]])}
+            {...rest}
         >
             {children}
         </Link>
