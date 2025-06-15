@@ -2,8 +2,8 @@ export const classNames = (className: string, mods?: Record<string, boolean | st
     return [
         className,
         ...additional || [],
-        Object.entries(mods || [])
+        ...Object.entries(mods || {})
             .filter(([_, value]) => Boolean(value))
-            .map((cls, _) => cls)
+            .map(([cls, _]) => cls)
     ].join(" ");
 }
