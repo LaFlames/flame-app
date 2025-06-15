@@ -1,3 +1,3 @@
 import {lazy} from "react";
 
-export const MainPage = lazy(() => import('./components/MainPage'));
+export const MainPage = lazy(() => import('./MainPage'));

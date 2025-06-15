@@ -1,8 +1,8 @@
-import {Link} from "react-router-dom";
 import {Suspense} from "react";
 import {classNames} from "shared/lib";
 import {useTheme} from "./providers/ThemeProvider";
 import {AppRouter} from "./providers/router";
+import {Navbar} from "widgets";
 
 const App = () => {
     const {theme, changeTheme} = useTheme();
@@ -10,8 +10,7 @@ const App = () => {
     return (
         <div className={classNames("app", {}, [theme])}>
             <Suspense fallback='Loading...'>
-                <Link to='/'>Main</Link>
-                <Link to='/about'>About</Link>
+                <Navbar />
                 <button onClick={changeTheme}>theme</button>
                 <AppRouter/>
             </Suspense>
