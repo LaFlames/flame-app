@@ -1,8 +1,8 @@
-import {Link, Route, Routes} from "react-router-dom";
-import {AboutPage, MainPage} from "pages";
+import {Link} from "react-router-dom";
 import {Suspense} from "react";
 import {classNames} from "shared/lib";
 import {useTheme} from "./providers/ThemeProvider";
+import {AppRouter} from "./providers/router";
 
 const App = () => {
     const {theme, changeTheme} = useTheme();
@@ -13,10 +13,7 @@ const App = () => {
                 <Link to='/'>Main</Link>
                 <Link to='/about'>About</Link>
                 <button onClick={changeTheme}>theme</button>
-                <Routes>
-                    <Route path='/' element={<MainPage />}/>
-                    <Route path='/about' element={<AboutPage />}/>
-                </Routes>
+                <AppRouter/>
             </Suspense>
         </div>
     )
