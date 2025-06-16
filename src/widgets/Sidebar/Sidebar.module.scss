@@ -1,16 +1,16 @@
 .sidebar {
-  grid-area: sidebar;
-  height: calc(100vh - var(--navbar-height));
-  padding: 20px;
-  background-color: var(--inverted-bg-color);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+    grid-area: sidebar;
+    height: calc(100vh - var(--navbar-height));
+    padding: 20px;
+    background-color: var(--inverted-bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .switcherWrapper {
-  display: flex;
-  align-items: center;
-  gap: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }

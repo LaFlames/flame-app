@@ -1,16 +1,15 @@
-import {classNames} from "shared/lib";
+import { classNames } from 'shared/lib';
 import cls from './ThemeSwitcher.module.scss';
-import {useTheme} from "app/providers/ThemeProvider";
-import {ThemeIcon} from "shared/assets/icons";
-import {Button} from "shared/ui";
-
+import { useTheme } from 'app/providers/ThemeProvider';
+import { ThemeIcon } from 'shared/assets/icons';
+import { Button } from 'shared/ui';
 
 interface ThemeSwitcherProps {
     className?: string;
 }
 
-const ThemeSwitcher = ({className}: ThemeSwitcherProps) => {
-    const {changeTheme} = useTheme();
+const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
+    const { changeTheme } = useTheme();
 
     return (
         <Button

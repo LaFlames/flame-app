@@ -1,9 +1,13 @@
-export const classNames = (className: string, mods?: Record<string, boolean | string>, additional?: string[]) => {
+export const classNames = (
+    className: string,
+    mods?: Record<string, boolean | string>,
+    additional?: string[]
+) => {
     return [
         className,
-        ...additional || [],
+        ...(additional || []),
         ...Object.entries(mods || {})
             .filter(([_, value]) => Boolean(value))
-            .map(([cls, _]) => cls)
-    ].join(" ");
-}
+            .map(([cls, _]) => cls),
+    ].join(' ');
+};

@@ -1,11 +1,11 @@
 .navbar {
-  grid-area: header;
-  width: 100%;
-  height: var(--navbar-height);
-  padding: 20px;
-  background-color: var(--inverted-bg-color);
-  display: flex;
-  align-items: center;
-  justify-content: end;
-  gap: 20px;
+    grid-area: header;
+    width: 100%;
+    height: var(--navbar-height);
+    padding: 20px;
+    background-color: var(--inverted-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 20px;
 }

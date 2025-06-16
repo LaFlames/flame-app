@@ -1,1 +1,1 @@
-export {default as ThemeIcon} from "./theme-icon.svg";
+export { default as ThemeIcon } from './theme-icon.svg';

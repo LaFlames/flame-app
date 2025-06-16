@@ -1,8 +1,8 @@
-import {createContext, Dispatch, SetStateAction} from "react";
+import { createContext, Dispatch, SetStateAction } from 'react';
 
 export enum ThemeEnum {
-    LIGHT = "light",
-    DARK = "dark",
+    LIGHT = 'light',
+    DARK = 'dark',
 }
 
 interface ThemeContext {
@@ -12,4 +12,4 @@ interface ThemeContext {
 
 export const ThemeContext = createContext<ThemeContext>({});
 
-export const LOCAL_STORAGE_THEME_KEY = "theme";
+export const LOCAL_STORAGE_THEME_KEY = 'theme';

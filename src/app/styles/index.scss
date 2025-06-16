@@ -1,26 +1,26 @@
-@import "reset";
-@import "variables/global";
-@import "themes/light";
-@import "themes/dark";
+@import 'reset';
+@import 'variables/global';
+@import 'themes/light';
+@import 'themes/dark';
 
 .app {
-  font: var(--font-l);
-  background: var(--bg-color);
-  color: var(--primary-color);
-  grid-template-columns: var(--sidebar-width) 1fr;
-  display: grid;
-  grid-template-areas:
-    "header header"
-    "sidebar content";
-  min-height: 100vh;
-  transition: grid-template-columns .3s ease-in-out;
+    font: var(--font-l);
+    background: var(--bg-color);
+    color: var(--primary-color);
+    grid-template-columns: var(--sidebar-width) 1fr;
+    display: grid;
+    grid-template-areas:
+        'header header'
+        'sidebar content';
+    min-height: 100vh;
+    transition: grid-template-columns 0.3s ease-in-out;
 }
 
 .collapsedSidebar {
-  grid-template-columns: var(--sidebar-collapsed-width) 1fr;
+    grid-template-columns: var(--sidebar-collapsed-width) 1fr;
 }
 
 .pageContent {
-  grid-area: content;
-  padding: 20px;
+    grid-area: content;
+    padding: 20px;
 }
