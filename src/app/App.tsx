@@ -8,7 +8,9 @@ const App = () => {
     const { theme } = useTheme();
     const [collapsed, setCollapsed] = useState(false);
 
-    const toggleCollapse = () => setCollapsed((prev) => !prev);
+    const toggleCollapse = () => {
+        setCollapsed((prev) => !prev);
+    };
 
     return (
         <div
