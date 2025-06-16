@@ -1,5 +1,3 @@
-import { classNames } from 'shared/lib';
-import cls from './LanguageSwitcher.module.scss';
 import { useTranslation } from 'react-i18next';
 import { Button } from 'shared/ui';
 
@@ -14,7 +12,7 @@ const LanguageSwitcher = ({ className }: LanguageSwitcherProps) => {
         await i18n.changeLanguage(i18n.language === 'en' ? 'ru' : 'en');
 
     return (
-        <div className={classNames(cls.switcher, {}, [className])}>
+        <div>
             <Button onClick={toggleLng}>{t('Language')}</Button>
         </div>
     );
