@@ -14,7 +14,7 @@ export const buildWebpackConfig = ({mode, paths, port, isDev}: BuildOptions): we
             filename: '[name].[contenthash].js',
             clean: true,
         },
-        plugins: buildPlugins(paths),
+        plugins: buildPlugins(paths, isDev),
         module: {
             rules: buildLoaders(isDev),
         },
