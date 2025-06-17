@@ -18,7 +18,7 @@ const App = () => {
                 theme,
             ])}
         >
-            <Suspense fallback="Loading...">
+            <Suspense fallback="">
                 <Navbar />
                 <Sidebar
                     collapsed={collapsed}

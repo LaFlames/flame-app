@@ -33,8 +33,11 @@ module.exports = {
         '@typescript-eslint/no-unsafe-argument': 'off',
         '@typescript-eslint/no-misused-promises': 'warn',
         '@typescript-eslint/no-floating-promises': 'warn',
+        '@typescript-eslint/no-unused-vars': 'warn',
         'react/react-in-jsx-scope': 'off',
         'react/no-deprecated': 'warn',
+        'i18next/no-literal-string': ['error', { markupOnly: true }],
+        'max-len': ['error', { ignoreComments: true }],
     },
     globals: {
         _IS_DEV_: true,
