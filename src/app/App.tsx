@@ -19,7 +19,6 @@ const App = () => {
             ])}
         >
             <Suspense fallback="Loading...">
-                dsfsd
                 <Navbar />
                 <Sidebar
                     collapsed={collapsed}
