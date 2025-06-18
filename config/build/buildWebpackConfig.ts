@@ -10,6 +10,7 @@ export const buildWebpackConfig = ({
     paths,
     port,
     isDev,
+    analyzeBundle,
 }: BuildOptions): webpack.Configuration => {
     return {
         mode,
@@ -19,7 +20,7 @@ export const buildWebpackConfig = ({
             filename: '[name].[contenthash].js',
             clean: true,
         },
-        plugins: buildPlugins(paths, isDev),
+        plugins: buildPlugins(paths, isDev, analyzeBundle),
         module: {
             rules: buildLoaders(isDev),
         },
