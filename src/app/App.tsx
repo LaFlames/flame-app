@@ -3,6 +3,8 @@ import { classNames } from 'shared/lib';
 import { useTheme } from './providers/ThemeProvider';
 import { AppRouter } from './providers/router';
 import { Navbar, Sidebar } from 'widgets';
+import { ErrorBoundary } from 'react-error-boundary';
+import { ErrorPage } from 'pages';
 
 const App = () => {
     const { theme } = useTheme();
@@ -13,20 +15,24 @@ const App = () => {
     };
 
     return (
-        <div
-            className={classNames('app', { collapsedSidebar: collapsed }, [
-                theme,
-            ])}
-        >
-            <Suspense fallback="">
-                <Navbar />
-                <Sidebar
-                    collapsed={collapsed}
-                    toggleCollapse={toggleCollapse}
-                />
-                <AppRouter />
-            </Suspense>
-        </div>
+        <Suspense fallback="">
+            <ErrorBoundary fallback={<ErrorPage />}>
+                <div
+                    className={classNames(
+                        'app',
+                        { collapsedSidebar: collapsed },
+                        [theme]
+                    )}
+                >
+                    <Navbar />
+                    <Sidebar
+                        collapsed={collapsed}
+                        toggleCollapse={toggleCollapse}
+                    />
+                    <AppRouter />
+                </div>
+            </ErrorBoundary>
+        </Suspense>
     );
 };
 

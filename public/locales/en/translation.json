@@ -2,5 +2,7 @@
   "Main": "Main",
   "About": "About",
   "Language": "EN",
-  "Not found": "Not found page"
+  "Not found": "Not found page",
+  "Reload page": "Reload page",
+  "Something went wrong": "Something went wrong"
 }

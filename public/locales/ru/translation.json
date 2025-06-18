@@ -2,5 +2,7 @@
   "Main": "Главная",
   "About": "О себе",
   "Language": "RU",
-  "Not found": "Страница не найдена"
+  "Not found": "Страница не найдена",
+  "Reload page": "Обновить страницу",
+  "Something went wrong": "Что-то пошло не так"
 }
