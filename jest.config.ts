@@ -11,7 +11,12 @@ export default {
     testMatch: ['<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)'],
     preset: 'ts-jest',
     testEnvironment: 'jsdom',
-    moduleDirectories: ['node_modules'],
+    moduleDirectories: ['node_modules', 'src'],
+    moduleNameMapper: {
+        '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
+        '^.+\\.svg$': '<rootDir>/config/jest/svgTransform.tsx',
+    },
+    setupFilesAfterEnv: ['<rootDir>/config/jest/setupTests.ts'],
     // The root directory that Jest should scan for tests and modules within
     // rootDir: undefined,
 

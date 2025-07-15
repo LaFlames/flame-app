@@ -19,6 +19,12 @@ module.exports = {
                 sourceType: 'script',
             },
         },
+        {
+            files: ['**/src/**/*.test.{ts,tsx}'],
+            rules: {
+                'i18next/no-literal-string': 'off',
+            },
+        },
     ],
     parserOptions: {
         ecmaVersion: 'latest',
@@ -36,7 +42,10 @@ module.exports = {
         '@typescript-eslint/no-unused-vars': 'warn',
         'react/react-in-jsx-scope': 'off',
         'react/no-deprecated': 'warn',
-        'i18next/no-literal-string': ['error', { markupOnly: true }],
+        'i18next/no-literal-string': [
+            'error',
+            { markupOnly: true, ignoreAttribute: ['data-testid'] },
+        ],
         'max-len': ['error', { ignoreComments: true }],
     },
     globals: {

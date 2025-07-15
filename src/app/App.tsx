@@ -25,10 +25,7 @@ const App = () => {
                     )}
                 >
                     <Navbar />
-                    <Sidebar
-                        collapsed={collapsed}
-                        toggleCollapse={toggleCollapse}
-                    />
+                    <Sidebar toggleCollapse={toggleCollapse} />
                     <AppRouter />
                 </div>
             </ErrorBoundary>

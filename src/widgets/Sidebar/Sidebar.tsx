@@ -6,18 +6,18 @@ import { LanguageSwitcher } from '../LanguageSwitcher';
 
 interface SidebarProps {
     className?: string;
-    collapsed: boolean;
     toggleCollapse: () => void;
 }
 
-const Sidebar = ({ className, collapsed, toggleCollapse }: SidebarProps) => {
+const Sidebar = ({ className, toggleCollapse }: SidebarProps) => {
     return (
         <div
-            className={classNames(cls.sidebar, { [cls.collapsed]: collapsed }, [
-                className,
-            ])}
+            data-testid="sidebar"
+            className={classNames(cls.sidebar, {}, [className])}
         >
-            <Button onClick={toggleCollapse}>toggle</Button>
+            <Button data-testid="toggle collapse" onClick={toggleCollapse}>
+                toggle
+            </Button>
             <div className={cls.switcherWrapper}>
                 <ThemeSwitcher />
                 <LanguageSwitcher />
