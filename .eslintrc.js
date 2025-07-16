@@ -8,6 +8,7 @@ module.exports = {
         'plugin:react/recommended',
         'plugin:prettier/recommended',
         'plugin:i18next/recommended',
+        'plugin:storybook/recommended',
     ],
     overrides: [
         {
@@ -40,8 +41,12 @@ module.exports = {
         '@typescript-eslint/no-misused-promises': 'warn',
         '@typescript-eslint/no-floating-promises': 'warn',
         '@typescript-eslint/no-unused-vars': 'warn',
+        '@typescript-eslint/consistent-type-assertions': 'warn',
+        '@typescript-eslint/prefer-includes': 'off',
         'react/react-in-jsx-scope': 'off',
         'react/no-deprecated': 'warn',
+        'react/display-name': 'warn',
+        'spaced-comment': 'off',
         'i18next/no-literal-string': [
             'error',
             { markupOnly: true, ignoreAttribute: ['data-testid'] },

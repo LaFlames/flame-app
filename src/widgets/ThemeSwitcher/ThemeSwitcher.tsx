@@ -1,8 +1,8 @@
 import { classNames } from 'shared/lib';
 import cls from './ThemeSwitcher.module.scss';
 import { useTheme } from 'app/providers/ThemeProvider';
-import { ThemeIcon } from 'shared/assets/icons';
 import { Button } from 'shared/ui';
+import ThemeIcon from 'shared/assets/icons/theme-icon.svg';
 
 interface ThemeSwitcherProps {
     className?: string;
