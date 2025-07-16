@@ -12,8 +12,10 @@
     "lint:fix": "eslint \"**/*.{ts,tsx}\" --fix",
     "stylelint:check": "npx stylelint \"**/*.scss\"",
     "stylelint:fix": "npx stylelint \"**/*.scss\" --fix",
+    "test:unit": "jest",
     "storybook": "storybook dev -p 6006 -c ./config/storybook",
-    "build-storybook": "storybook build -c ./config/storybook"
+    "build-storybook": "storybook build -c ./config/storybook",
+    "chromatic": "npx chromatic"
   },
   "author": "",
   "license": "ISC",
@@ -35,6 +37,7 @@
     "@types/webpack-bundle-analyzer": "^4.4.1",
     "@types/webpack-dev-server": "^4.7.2",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "chromatic": "^13.1.2",
     "css-loader": "^6.6.0",
     "eslint": "^8.57.1",
     "eslint-config-prettier": "^10.1.5",

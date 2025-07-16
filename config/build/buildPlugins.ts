@@ -9,7 +9,7 @@ export const buildPlugins = (
     isDev: boolean,
     analyzeBundle: boolean
 ): webpack.WebpackPluginInstance[] => {
-    return [
+    const plugins = [
         new HtmlWebpackPlugin({
             template: paths.html,
         }),
@@ -21,8 +21,15 @@ export const buildPlugins = (
         new webpack.DefinePlugin({
             _IS_DEV_: isDev,
         }),
-        new BundleAnalyzerPlugin({
-            analyzerMode: analyzeBundle ? 'server' : 'disabled',
-        }),
     ];
+
+    if (isDev) {
+        plugins.push(
+            new BundleAnalyzerPlugin({
+                analyzerMode: analyzeBundle ? 'server' : 'disabled',
+            })
+        );
+    }
+
+    return plugins;
 };

@@ -1,0 +1,36 @@
+name: build, linting, tests
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [22.x]
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      - run: npm ci
+      - name: run build
+        run: npm run build:prod
+      - name: eslint check
+        run: npm run lint:check
+      - name: stylelint check
+        run: npm run stylelint:check
+      - name: run jest tests
+        run: npm run test:unit
+      - name: run chromatic ui tests
+        uses: chromaui/action@latest
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
