@@ -1,5 +1,5 @@
 import type { Preview } from '@storybook/react-webpack5';
-import { RouteDecorator, ThemeDecorator } from 'shared/config/storybook';
+import { RouteDecorator, ThemeDecorator } from 'shared/lib/storybook';
 import { ThemeEnum } from 'app/providers/ThemeProvider';
 import '../../src/app/styles/index.scss';
 

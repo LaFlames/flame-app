@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
-import { ThemeDecorator } from 'shared/config/storybook';
+import { ThemeDecorator } from 'shared/lib/storybook';
 import Sidebar from './Sidebar';
 import { ThemeEnum } from 'app/providers/ThemeProvider';
 

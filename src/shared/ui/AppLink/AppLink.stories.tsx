@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
-import { ThemeDecorator } from 'shared/config/storybook';
+import { ThemeDecorator } from 'shared/lib/storybook';
 import AppLink, { AppLinkTheme } from './AppLink';
 import { ThemeEnum } from 'app/providers/ThemeProvider';
 import { ButtonTheme } from 'shared/ui/Button/Button';
@@ -22,8 +22,8 @@ export const Primary: Story = {
     },
 };
 
-export const Secondary: Story = {
-    args: { children: 'Link', theme: AppLinkTheme.SECONDARY },
+export const InvertedPrimary: Story = {
+    args: { children: 'Link', theme: AppLinkTheme.INVERTED_PRIMARY },
 };
 
 export const PrimaryDark: Story = {
@@ -34,7 +34,7 @@ export const PrimaryDark: Story = {
     decorators: [ThemeDecorator(ThemeEnum.DARK)],
 };
 
-export const SecondaryDark: Story = {
-    args: { children: 'Link', theme: AppLinkTheme.SECONDARY },
+export const InvertedPrimaryDark: Story = {
+    args: { children: 'Link', theme: AppLinkTheme.INVERTED_PRIMARY },
     decorators: [ThemeDecorator(ThemeEnum.DARK)],
 };

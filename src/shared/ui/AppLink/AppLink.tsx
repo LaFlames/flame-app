@@ -4,7 +4,7 @@ import { Link, LinkProps } from 'react-router-dom';
 
 export enum AppLinkTheme {
     PRIMARY = 'primary',
-    SECONDARY = 'secondary',
+    INVERTED_PRIMARY = 'invertedPrimary',
 }
 
 interface AppLinkProps extends LinkProps {
